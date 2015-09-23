@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Running Predictor</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Running Predictor">
+  <meta name="author" content="Carlos Figueira">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Running Predictor</h1>
+    <h2>Predicting the finishing times of races based on training data</h2>
+    <p>Carlos Figueira<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Preparing for races</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Typical pre-race preparation for a runner</p>
+
+<ul>
+<li>Gather all the gear that will be used in the race</li>
+<li>Plan the race splits based on the estimated running time</li>
+<li>Calculate and gather the nutrition requirements (if any) of the race</li>
+</ul>
+
+<p>The running predictor helps with the second item, by taking the training data
+from the runners and predicting the finish time for a race in the future.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id1" style="background:;">
+  <hgroup>
+    <h2>The running predictor</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Linear model based on hundreds of training runs, that are used to predict the finishing time of an upcoming race</p>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id2" style="background:;">
+  <hgroup>
+    <h2>User options</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Race distance
+
+<ul>
+<li>The distance for the race you want to predict the finishing time, in miles. Common values are 3.1 (5k), 6.2 (10k), 13.1 (half marathon) and 26.2 (marathon)</li>
+</ul></li>
+<li>First year of training data
+
+<ul>
+<li>The training data set used to build the model has data for the past 4 years, but restricting it to most recent results may yield a better estimate of the user&#39;s current physical conditions</li>
+</ul></li>
+<li>Course difficulty
+
+<ul>
+<li>Some races are harder than others, due to factors like elevation or climate. The user can use this option to better predict their finish time.</li>
+</ul></li>
+<li>Training pace
+
+<ul>
+<li>Some training runs are done in a higher or lower pace than the expected effort; this option can limit the runs used in the training to only those within a certain pace range.</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id3" style="background:;">
+  <hgroup>
+    <h2>Using the app</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Browse to <a href="https://carlosfigueira.shinyapps.io/RunningPredictor">https://carlosfigueira.shinyapps.io/RunningPredictor</a></li>
+<li>Enter the race and training information</li>
+<li>Find out the predicted race time</li>
+<li>Prepare the race plan based on it</li>
+<li>Enjoy!</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Preparing for races'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='The running predictor'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='User options'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Using the app'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
